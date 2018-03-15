@@ -13,6 +13,15 @@
 		EF3CC44F205AB90900A6CB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC44D205AB90900A6CB47 /* Main.storyboard */; };
 		EF3CC451205AB90900A6CB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC450205AB90900A6CB47 /* Assets.xcassets */; };
 		EF3CC454205AB90900A6CB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC452205AB90900A6CB47 /* LaunchScreen.storyboard */; };
+		EF3CC45F205ABBDA00A6CB47 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3CC45E205ABBDA00A6CB47 /* libsqlite3.tbd */; };
+		EF3CC4D6205ABD8300A6CB47 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4CB205ABD8200A6CB47 /* FMDatabaseQueue.m */; };
+		EF3CC4D7205ABD8300A6CB47 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4CC205ABD8200A6CB47 /* FMDatabasePool.m */; };
+		EF3CC4D8205ABD8300A6CB47 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC4CE205ABD8200A6CB47 /* Info.plist */; };
+		EF3CC4D9205ABD8300A6CB47 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4D0205ABD8200A6CB47 /* FMDatabaseAdditions.m */; };
+		EF3CC4DA205ABD8300A6CB47 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4D4205ABD8300A6CB47 /* FMResultSet.m */; };
+		EF3CC4DB205ABD8300A6CB47 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4D5205ABD8300A6CB47 /* FMDatabase.m */; };
+		EF3CC4DD205AC14900A6CB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */; };
+		EF3CC4E2205ACC0200A6CB47 /* salleplaces.db in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,22 @@
 		EF3CC450205AB90900A6CB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF3CC453205AB90900A6CB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF3CC455205AB90900A6CB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3CC45E205ABBDA00A6CB47 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EF3CC4C9205ABD8100A6CB47 /* SallePlaces-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SallePlaces-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF3CC4CA205ABD8200A6CB47 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		EF3CC4CB205ABD8200A6CB47 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		EF3CC4CC205ABD8200A6CB47 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		EF3CC4CD205ABD8200A6CB47 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		EF3CC4CE205ABD8200A6CB47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3CC4CF205ABD8200A6CB47 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		EF3CC4D0205ABD8200A6CB47 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		EF3CC4D1205ABD8200A6CB47 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		EF3CC4D2205ABD8200A6CB47 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		EF3CC4D3205ABD8300A6CB47 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		EF3CC4D4205ABD8300A6CB47 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		EF3CC4D5205ABD8300A6CB47 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = salleplaces.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3CC45F205ABBDA00A6CB47 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +68,8 @@
 			children = (
 				EF3CC446205AB90900A6CB47 /* SallePlaces */,
 				EF3CC445205AB90900A6CB47 /* Products */,
+				EF3CC45D205ABBDA00A6CB47 /* Frameworks */,
+				EF3CC4C9205ABD8100A6CB47 /* SallePlaces-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +84,11 @@
 		EF3CC446205AB90900A6CB47 /* SallePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				EF3CC4DF205ACB9300A6CB47 /* fmdb */,
+				EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */,
 				EF3CC447205AB90900A6CB47 /* AppDelegate.swift */,
 				EF3CC449205AB90900A6CB47 /* FirstViewController.swift */,
+				EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */,
 				EF3CC44B205AB90900A6CB47 /* SecondViewController.swift */,
 				EF3CC44D205AB90900A6CB47 /* Main.storyboard */,
 				EF3CC450205AB90900A6CB47 /* Assets.xcassets */,
@@ -65,6 +96,34 @@
 				EF3CC455205AB90900A6CB47 /* Info.plist */,
 			);
 			path = SallePlaces;
+			sourceTree = "<group>";
+		};
+		EF3CC45D205ABBDA00A6CB47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF3CC45E205ABBDA00A6CB47 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF3CC4DF205ACB9300A6CB47 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				EF3CC4CF205ABD8200A6CB47 /* FMDatabase.h */,
+				EF3CC4D5205ABD8300A6CB47 /* FMDatabase.m */,
+				EF3CC4CA205ABD8200A6CB47 /* FMDatabaseAdditions.h */,
+				EF3CC4D0205ABD8200A6CB47 /* FMDatabaseAdditions.m */,
+				EF3CC4D2205ABD8200A6CB47 /* FMDatabasePool.h */,
+				EF3CC4CC205ABD8200A6CB47 /* FMDatabasePool.m */,
+				EF3CC4CD205ABD8200A6CB47 /* FMDatabaseQueue.h */,
+				EF3CC4CB205ABD8200A6CB47 /* FMDatabaseQueue.m */,
+				EF3CC4D3205ABD8300A6CB47 /* FMDB.h */,
+				EF3CC4D1205ABD8200A6CB47 /* FMResultSet.h */,
+				EF3CC4D4205ABD8300A6CB47 /* FMResultSet.m */,
+				EF3CC4CE205ABD8200A6CB47 /* Info.plist */,
+			);
+			name = fmdb;
+			path = ../fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +158,7 @@
 				TargetAttributes = {
 					EF3CC443205AB90900A6CB47 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,9 +186,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3CC4D8205ABD8300A6CB47 /* Info.plist in Resources */,
 				EF3CC454205AB90900A6CB47 /* LaunchScreen.storyboard in Resources */,
 				EF3CC451205AB90900A6CB47 /* Assets.xcassets in Resources */,
 				EF3CC44F205AB90900A6CB47 /* Main.storyboard in Resources */,
+				EF3CC4E2205ACC0200A6CB47 /* salleplaces.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3CC4DD205AC14900A6CB47 /* LoginViewController.swift in Sources */,
 				EF3CC44C205AB90900A6CB47 /* SecondViewController.swift in Sources */,
+				EF3CC4D6205ABD8300A6CB47 /* FMDatabaseQueue.m in Sources */,
+				EF3CC4DA205ABD8300A6CB47 /* FMResultSet.m in Sources */,
+				EF3CC4D7205ABD8300A6CB47 /* FMDatabasePool.m in Sources */,
 				EF3CC448205AB90900A6CB47 /* AppDelegate.swift in Sources */,
 				EF3CC44A205AB90900A6CB47 /* FirstViewController.swift in Sources */,
+				EF3CC4D9205ABD8300A6CB47 /* FMDatabaseAdditions.m in Sources */,
+				EF3CC4DB205ABD8300A6CB47 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +346,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SallePlaces/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SallePlaces",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jtorrus.SallePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SallePlaces-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,11 +367,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SallePlaces/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SallePlaces",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jtorrus.SallePlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SallePlaces-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
