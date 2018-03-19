@@ -11,5 +11,4 @@ import Foundation
 protocol DAO {
     func insert(_ database: FMDatabase, itemToInsert: AnyObject) -> Bool
     func delete(_ database: FMDatabase, itemToDelete: AnyObject) -> Bool
-    func read(_ database: FMDatabase) -> Array<AnyObject>
 }
