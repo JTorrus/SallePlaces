@@ -9,16 +9,15 @@
 import Foundation
 
 class DAOFactory {
-    class func create(_ instanceType: Int) -> DAO {
-        switch instanceType {
-        case 0:
-            return TicketManager()
-        case 1:
-            return UserManager()
-        case 2:
-            return PlaceManager()
-        default:
-            break
-        }
+    class func createUserManager() -> UserDAO {
+        return UserManager()
+    }
+    
+    class func createPlaceManager() -> PlaceDAO {
+        return PlaceManager()
+    }
+    
+    class func createTicketManager() -> TicketDAO {
+        return TicketManager()
     }
 }

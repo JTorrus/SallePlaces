@@ -9,6 +9,6 @@
 import Foundation
 
 protocol DAO {
-    func insert(_ database: FMDatabase, itemToInsert: AnyObject) -> Bool
-    func delete(_ database: FMDatabase, itemToDelete: AnyObject) -> Bool
+    func insert(_ database: FMDatabase, itemToInsert: Any) -> Bool
+    func delete(_ database: FMDatabase, itemToDelete: Any) -> Bool
 }

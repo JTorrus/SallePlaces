@@ -29,7 +29,7 @@ class TicketManager: TicketDAO {
         return tickets
     }
     
-    func insert(_ database: FMDatabase, itemToInsert: AnyObject) -> Bool {
+    func insert(_ database: FMDatabase, itemToInsert: Any) -> Bool {
         var result: Bool = false
         
         if database.open() {
@@ -46,7 +46,7 @@ class TicketManager: TicketDAO {
         return result
     }
     
-    func delete(_ database: FMDatabase, itemToDelete: AnyObject) -> Bool {
+    func delete(_ database: FMDatabase, itemToDelete: Any) -> Bool {
         var result: Bool = false
         
         if database.open() {

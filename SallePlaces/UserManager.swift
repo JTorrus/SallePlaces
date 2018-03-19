@@ -10,7 +10,7 @@ import Foundation
 
 class UserManager: UserDAO {
     func getInfo(_ database: FMDatabase, userEmail: String) -> User {
-        var user: User
+        var user: User?
         
         if database.open() {
             let sentence = "SELECT * FROM user WHERE email = ?"
@@ -28,7 +28,7 @@ class UserManager: UserDAO {
             print("Error opening database: \(database.lastErrorMessage())")
         }
         
-        return user
+        return user!
     }
     
     func updateWallet(_ database: FMDatabase, userEmail: String, quantityToAdd: Int) -> Bool {
@@ -48,7 +48,7 @@ class UserManager: UserDAO {
         return result
     }
     
-    func insert(_ database: FMDatabase, itemToInsert: AnyObject) -> Bool {
+    func insert(_ database: FMDatabase, itemToInsert: Any) -> Bool {
         var result: Bool = false
         
         if database.open() {
@@ -65,7 +65,7 @@ class UserManager: UserDAO {
         return result
     }
     
-    func delete(_ database: FMDatabase, itemToDelete: AnyObject) -> Bool {
+    func delete(_ database: FMDatabase, itemToDelete: Any) -> Bool {
         var result: Bool = false
         if database.open() {
             let sentence = "DELETE FROM user WHERE email = ?"
