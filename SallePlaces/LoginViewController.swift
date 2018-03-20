@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setUpDatabase()
+        print(FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!.absoluteString)
     }
     
     override func didReceiveMemoryWarning() {

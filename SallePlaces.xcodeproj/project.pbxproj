@@ -21,8 +21,8 @@
 		6692E3BC205F06080049E30C /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3BB205F06080049E30C /* PlaceManager.swift */; };
 		6692E3BE205F39C10049E30C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3BD205F39C10049E30C /* RegisterViewController.swift */; };
 		EF3CC448205AB90900A6CB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC447205AB90900A6CB47 /* AppDelegate.swift */; };
-		EF3CC44A205AB90900A6CB47 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC449205AB90900A6CB47 /* FirstViewController.swift */; };
-		EF3CC44C205AB90900A6CB47 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC44B205AB90900A6CB47 /* SecondViewController.swift */; };
+		EF3CC44A205AB90900A6CB47 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC449205AB90900A6CB47 /* PlacesViewController.swift */; };
+		EF3CC44C205AB90900A6CB47 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC44B205AB90900A6CB47 /* FavoritesViewController.swift */; };
 		EF3CC44F205AB90900A6CB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC44D205AB90900A6CB47 /* Main.storyboard */; };
 		EF3CC451205AB90900A6CB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC450205AB90900A6CB47 /* Assets.xcassets */; };
 		EF3CC454205AB90900A6CB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC452205AB90900A6CB47 /* LaunchScreen.storyboard */; };
@@ -53,8 +53,8 @@
 		6692E3BD205F39C10049E30C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EF3CC444205AB90900A6CB47 /* SallePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SallePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3CC447205AB90900A6CB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF3CC449205AB90900A6CB47 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		EF3CC44B205AB90900A6CB47 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EF3CC449205AB90900A6CB47 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		EF3CC44B205AB90900A6CB47 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		EF3CC44E205AB90900A6CB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF3CC450205AB90900A6CB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF3CC453205AB90900A6CB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,9 +113,9 @@
 				EF3CC4DF205ACB9300A6CB47 /* fmdb */,
 				EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */,
 				EF3CC447205AB90900A6CB47 /* AppDelegate.swift */,
-				EF3CC449205AB90900A6CB47 /* FirstViewController.swift */,
+				EF3CC449205AB90900A6CB47 /* PlacesViewController.swift */,
 				EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */,
-				EF3CC44B205AB90900A6CB47 /* SecondViewController.swift */,
+				EF3CC44B205AB90900A6CB47 /* FavoritesViewController.swift */,
 				EF3CC44D205AB90900A6CB47 /* Main.storyboard */,
 				EF3CC450205AB90900A6CB47 /* Assets.xcassets */,
 				EF3CC452205AB90900A6CB47 /* LaunchScreen.storyboard */,
@@ -244,13 +244,13 @@
 				6692E3BE205F39C10049E30C /* RegisterViewController.swift in Sources */,
 				EF3CC4DD205AC14900A6CB47 /* LoginViewController.swift in Sources */,
 				6692E3AE205EF5C60049E30C /* UserManager.swift in Sources */,
-				EF3CC44C205AB90900A6CB47 /* SecondViewController.swift in Sources */,
+				EF3CC44C205AB90900A6CB47 /* FavoritesViewController.swift in Sources */,
 				6692E3B8205F04BC0049E30C /* TicketDAO.swift in Sources */,
 				EF3CC4D6205ABD8300A6CB47 /* FMDatabaseQueue.m in Sources */,
 				EF3CC4DA205ABD8300A6CB47 /* FMResultSet.m in Sources */,
 				EF3CC4D7205ABD8300A6CB47 /* FMDatabasePool.m in Sources */,
 				EF3CC448205AB90900A6CB47 /* AppDelegate.swift in Sources */,
-				EF3CC44A205AB90900A6CB47 /* FirstViewController.swift in Sources */,
+				EF3CC44A205AB90900A6CB47 /* PlacesViewController.swift in Sources */,
 				6692E3B0205EF5D20049E30C /* Place.swift in Sources */,
 				6692E3BC205F06080049E30C /* PlaceManager.swift in Sources */,
 				6692E3AA205EF2FD0049E30C /* DAOFactory.swift in Sources */,
