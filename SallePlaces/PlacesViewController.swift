@@ -8,7 +8,9 @@
 
 import UIKit
 
-class PlacesViewController: UIViewController {
+class PlacesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,12 @@ class PlacesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 }
 
