@@ -9,6 +9,27 @@
 import Foundation
 
 class UserManager: UserDAO {
+    func userExistsWithCorrectInfo(_ database: FMDatabase, userEmail: String, userPassword: String) -> Bool {
+        var exists: Bool = false
+        
+        if database.open() {
+            let sentence = "SELECT * FROM user WHERE email = ? AND password = ?"
+            let data: Array = [userEmail, userPassword]
+            
+            if let result: FMResultSet = database.executeQuery(sentence, withArgumentsIn: data) {
+                if result.next() {
+                    exists = true
+                }
+                result.close()
+                database.close()
+            }
+        } else {
+            print("Error opening database: \(database.lastErrorMessage())")
+        }
+        
+        return exists
+    }
+    
     func getInfo(_ database: FMDatabase, userEmail: String) -> User {
         var user: User?
         
@@ -29,6 +50,27 @@ class UserManager: UserDAO {
         }
         
         return user!
+    }
+    
+    func getCurrentUser(_ database: FMDatabase) -> User? {
+        var user: User?
+        
+        if database.open() {
+            let sentence = "SELECT * FROM user WHERE is_logged = true"
+            
+            if let result: FMResultSet = try? database.executeQuery(sentence, values: nil) {
+                while (result.next()) {
+                    user = User(email: result.string(forColumnIndex: 0)!, name: result.string(forColumnIndex: 1)!, password: result.string(forColumnIndex: 2)!, wallet: Int(result.int(forColumnIndex: 3)), isLogged: result.bool(forColumnIndex: 4))
+                }
+                result.close()
+                
+                database.close()
+            }
+        } else {
+            print("Error opening database: \(database.lastErrorMessage())")
+        }
+        
+        return user
     }
     
     func updateWallet(_ database: FMDatabase, userEmail: String, quantityToAdd: Int) -> Bool {

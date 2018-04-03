@@ -9,19 +9,21 @@
 import Foundation
 
 class TicketManager: TicketDAO {
-    func read(_ database: FMDatabase) -> Array<Ticket> {
+    func read(_ database: FMDatabase, userEmail: String) -> Array<Ticket> {
         var tickets: Array<Ticket> = Array()
         
         if database.open() {
-            let sentence = "SELECT * FROM ticket"
+            let sentence = "SELECT * FROM ticket WHERE email = ?"
+            let data: Array = [userEmail]
             
-            let result: FMResultSet = try! database.executeQuery(sentence, values: nil)
-            while (result.next()) {
-                let ticket = Ticket(ticketId: result.string(forColumnIndex: 0)!, userEmail: result.string(forColumnIndex: 1)!, placeName: result.string(forColumnIndex: 2)!, totalPrice: Int(result.int(forColumnIndex: 3)), date: result.string(forColumnIndex: 4)!)
-                tickets.append(ticket)
+            if let result: FMResultSet = database.executeQuery(sentence, withArgumentsIn: data) {
+                while (result.next()) {
+                    let ticket = Ticket(ticketId: result.string(forColumnIndex: 0)!, userEmail: result.string(forColumnIndex: 1)!, placeName: result.string(forColumnIndex: 2)!, totalPrice: Int(result.int(forColumnIndex: 3)), date: result.string(forColumnIndex: 4)!)
+                    tickets.append(ticket)
+                }
+                result.close()
+                database.close()
             }
-            result.close()
-            database.close()
         } else {
             print("Error opening database: \(database.lastErrorMessage())")
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lla-Ks-l1G">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                                 </constraints>
                                 <state key="normal" title="Iniciar sesión"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" id="dcR-Zf-9Vw"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="logged" id="dcR-Zf-9Vw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-n8-YOD">
@@ -83,6 +83,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5fC-eN-GXg"/>
                     </view>
+                    <connections>
+                        <outlet property="textEmail" destination="sUg-cl-F6q" id="OEi-3G-Z3h"/>
+                        <outlet property="textPassword" destination="SN7-Fc-a9g" id="l3J-vb-Iur"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQo-2M-nwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,8 +166,7 @@
                                 <rect key="frame" x="67" y="394" width="240" height="30"/>
                                 <state key="normal" title="Registrarse"/>
                                 <connections>
-                                    <action selector="onRegButtonPressed:" destination="gzB-G3-nCB" eventType="touchUpInside" id="5lz-XG-lFd"/>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" id="UvQ-NB-akB"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="segue_reg" id="UvQ-NB-akB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -462,7 +465,6 @@
         <image name="people" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oq2-8p-db2"/>
         <segue reference="UvQ-NB-akB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,7 +15,6 @@ class RegisterViewController: UIViewController {
     
     var database: FMDatabase = DbSingleton.getInstance()
     let userManager: UserManager = DAOFactory.createUserManager() as! UserManager
-    var existingUserEmail: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,26 +27,22 @@ class RegisterViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if textEmail.text != "" && textPassword.text != "" && textName.text != "" {
-            let newUser: User = User(email: textEmail.text!, name: textName.text!, password: textPassword.text!, wallet: 1000, isLogged: true)
-            let result = userManager.insert(database, itemToInsert: newUser)
-            
-            if result {
-                existingUserEmail = textEmail.text!
+        if segue.identifier == "segue_reg" {
+            if textEmail.text != "" && textPassword.text != "" && textName.text != "" {
+                let newUser: User = User(email: textEmail.text!, name: textName.text!, password: textPassword.text!, wallet: 1000, isLogged: true)
+                let result = userManager.insert(database, itemToInsert: newUser)
+                
+                if !result {
+                    let alert = UIAlertController(title: "Error", message: "El correo que has introducido ya está en uso.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             } else {
-                let alert = UIAlertController(title: "Error", message: "El correo que has introducido ya está en uso.", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Aviso", message: "Debes rellenar todos los datos para poder registrarte", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
                 self.present(alert, animated: true, completion: nil)
             }
-        } else {
-            let alert = UIAlertController(title: "Aviso", message: "Debes rellenar todos los datos para poder registrarte", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
         }
-    }
-    
-    @IBAction func onRegButtonPressed(_ sender: UIButton) {
-        
     }
 }

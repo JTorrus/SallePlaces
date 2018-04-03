@@ -9,6 +9,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var textEmail: UITextField!
+    @IBOutlet weak var textPassword: UITextField!
+    
+    var database: FMDatabase = DbSingleton.getInstance()
+    let userManager: UserManager = DAOFactory.createUserManager() as! UserManager
     let databaseFileName: String = "salleplaces.db"
     var databasePath: String = String()
     
@@ -39,6 +44,23 @@ class LoginViewController: UIViewController {
                         print("Error copying the database to the Documents Directory")
                     }
                 }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "logged" {
+            if textEmail.text != "" && textPassword.text != "" {
+                if !userManager.userExistsWithCorrectInfo(database, userEmail: textEmail.text!, userPassword: textPassword.text!) {
+                    let alert = UIAlertController(title: "Error", message: "El correo o contraseña que has introducido no son válidos.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            } else {
+                let alert = UIAlertController(title: "Aviso", message: "Debes rellenar todos los datos para poder iniciar sesión", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }

@@ -9,12 +9,14 @@
 import UIKit
 
 class PlacesViewController: UITableViewController {
-
-    var places: PlaceManager = PlaceManager()
+    var places: PlaceManager = DAOFactory.createPlaceManager() as! PlaceManager
     var database: FMDatabase = DbSingleton.getInstance()
+    var arrayOfPlaces: Array<Place> = []
+    var currentUserEmail: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        arrayOfPlaces = places.read(database)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,12 +26,12 @@ class PlacesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return places.read(database).count
+        return arrayOfPlaces.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "place_cell", for: indexPath)
-        let place = places.read(database)[indexPath.row]
+        let place = arrayOfPlaces[indexPath.row]
         
         cell.textLabel?.text = place.name
         cell.detailTextLabel?.text = place.location
@@ -39,7 +41,7 @@ class PlacesViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let place = segue.destination as? SinglePlaceViewController {
-            place.singlePlace = places.read(database)[(tableView.indexPathForSelectedRow?.row)!]
+            place.singlePlace = arrayOfPlaces[(tableView.indexPathForSelectedRow?.row)!]
         }
     }
 }

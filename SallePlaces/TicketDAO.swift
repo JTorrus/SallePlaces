@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TicketDAO: DAO {
-    func read(_ database: FMDatabase) -> Array<Ticket>
+    func read(_ database: FMDatabase, userEmail: String) -> Array<Ticket>
 }

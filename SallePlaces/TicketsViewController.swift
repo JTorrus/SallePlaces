@@ -9,11 +9,13 @@
 import UIKit
 
 class TicketsViewController: UITableViewController {
-    var tickets: TicketManager = TicketManager()
+    var tickets: TicketManager = DAOFactory.createTicketManager() as! TicketManager
     var database: FMDatabase = DbSingleton.getInstance()
+    var arrayOfTickets: Array<Ticket> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        arrayOfTickets = tickets.read(database, userEmail: "test@gmail.com")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,12 +23,23 @@ class TicketsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        arrayOfTickets = tickets.read(database, userEmail: "test@gmail.com")
+        tableView.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tickets.read(database).count
+        return arrayOfTickets.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ticket_cell", for: indexPath)
+        let ticket = arrayOfTickets[indexPath.row]
+        
+        cell.textLabel?.text = ticket.placeName
+        cell.detailTextLabel?.text = ticket.date
+        
+        return cell
     }
 }
