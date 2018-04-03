@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		668044DA20730BF300DB7BC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668044D920730BF300DB7BC0 /* ProfileViewController.swift */; };
 		668044DC207319B000DB7BC0 /* SinglePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668044DB207319B000DB7BC0 /* SinglePlaceViewController.swift */; };
+		668044E7207394C400DB7BC0 /* batllo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 668044DD207394C200DB7BC0 /* batllo.jpg */; };
+		668044E8207394C400DB7BC0 /* cosmocaixa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 668044DE207394C300DB7BC0 /* cosmocaixa.jpg */; };
+		668044E9207394C400DB7BC0 /* aquarium.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044DF207394C300DB7BC0 /* aquarium.png */; };
+		668044EA207394C400DB7BC0 /* modernisme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 668044E0207394C300DB7BC0 /* modernisme.jpg */; };
+		668044EB207394C400DB7BC0 /* guell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 668044E1207394C300DB7BC0 /* guell.jpg */; };
+		668044EC207394C400DB7BC0 /* portaventura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 668044E2207394C300DB7BC0 /* portaventura.jpg */; };
+		668044ED207394C400DB7BC0 /* egipcio.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E3207394C300DB7BC0 /* egipcio.png */; };
+		668044EE207394C400DB7BC0 /* picasso.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E4207394C400DB7BC0 /* picasso.png */; };
+		668044EF207394C400DB7BC0 /* sagradafamilia.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E5207394C400DB7BC0 /* sagradafamilia.png */; };
+		668044F0207394C400DB7BC0 /* xocolata.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E6207394C400DB7BC0 /* xocolata.png */; };
 		6692E3A6205EEB3C0049E30C /* DbSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A5205EEB3C0049E30C /* DbSingleton.swift */; };
 		6692E3A8205EF1860049E30C /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A7205EF1860049E30C /* DAO.swift */; };
 		6692E3AA205EF2FD0049E30C /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A9205EF2FD0049E30C /* DAOFactory.swift */; };
@@ -42,6 +52,16 @@
 /* Begin PBXFileReference section */
 		668044D920730BF300DB7BC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		668044DB207319B000DB7BC0 /* SinglePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlaceViewController.swift; sourceTree = "<group>"; };
+		668044DD207394C200DB7BC0 /* batllo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = batllo.jpg; sourceTree = "<group>"; };
+		668044DE207394C300DB7BC0 /* cosmocaixa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cosmocaixa.jpg; sourceTree = "<group>"; };
+		668044DF207394C300DB7BC0 /* aquarium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aquarium.png; sourceTree = "<group>"; };
+		668044E0207394C300DB7BC0 /* modernisme.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = modernisme.jpg; sourceTree = "<group>"; };
+		668044E1207394C300DB7BC0 /* guell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guell.jpg; sourceTree = "<group>"; };
+		668044E2207394C300DB7BC0 /* portaventura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portaventura.jpg; sourceTree = "<group>"; };
+		668044E3207394C300DB7BC0 /* egipcio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egipcio.png; sourceTree = "<group>"; };
+		668044E4207394C400DB7BC0 /* picasso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picasso.png; sourceTree = "<group>"; };
+		668044E5207394C400DB7BC0 /* sagradafamilia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagradafamilia.png; sourceTree = "<group>"; };
+		668044E6207394C400DB7BC0 /* xocolata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xocolata.png; sourceTree = "<group>"; };
 		6692E3A5205EEB3C0049E30C /* DbSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbSingleton.swift; sourceTree = "<group>"; };
 		6692E3A7205EF1860049E30C /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		6692E3A9205EF2FD0049E30C /* DAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
@@ -93,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		668044F1207394FA00DB7BC0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				668044DF207394C300DB7BC0 /* aquarium.png */,
+				668044DD207394C200DB7BC0 /* batllo.jpg */,
+				668044DE207394C300DB7BC0 /* cosmocaixa.jpg */,
+				668044E3207394C300DB7BC0 /* egipcio.png */,
+				668044E1207394C300DB7BC0 /* guell.jpg */,
+				668044E0207394C300DB7BC0 /* modernisme.jpg */,
+				668044E4207394C400DB7BC0 /* picasso.png */,
+				668044E2207394C300DB7BC0 /* portaventura.jpg */,
+				668044E5207394C400DB7BC0 /* sagradafamilia.png */,
+				668044E6207394C400DB7BC0 /* xocolata.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		EF3CC43B205AB90900A6CB47 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +151,7 @@
 		EF3CC446205AB90900A6CB47 /* SallePlaces */ = {
 			isa = PBXGroup;
 			children = (
+				668044F1207394FA00DB7BC0 /* images */,
 				EF3CC4DF205ACB9300A6CB47 /* fmdb */,
 				EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */,
 				EF3CC447205AB90900A6CB47 /* AppDelegate.swift */,
@@ -231,11 +269,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668044EC207394C400DB7BC0 /* portaventura.jpg in Resources */,
 				EF3CC4D8205ABD8300A6CB47 /* Info.plist in Resources */,
+				668044EB207394C400DB7BC0 /* guell.jpg in Resources */,
 				EF3CC454205AB90900A6CB47 /* LaunchScreen.storyboard in Resources */,
+				668044EA207394C400DB7BC0 /* modernisme.jpg in Resources */,
 				EF3CC451205AB90900A6CB47 /* Assets.xcassets in Resources */,
+				668044EE207394C400DB7BC0 /* picasso.png in Resources */,
+				668044E8207394C400DB7BC0 /* cosmocaixa.jpg in Resources */,
+				668044E9207394C400DB7BC0 /* aquarium.png in Resources */,
+				668044F0207394C400DB7BC0 /* xocolata.png in Resources */,
+				668044EF207394C400DB7BC0 /* sagradafamilia.png in Resources */,
 				EF3CC44F205AB90900A6CB47 /* Main.storyboard in Resources */,
 				EF3CC4E2205ACC0200A6CB47 /* salleplaces.db in Resources */,
+				668044ED207394C400DB7BC0 /* egipcio.png in Resources */,
+				668044E7207394C400DB7BC0 /* batllo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

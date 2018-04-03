@@ -210,14 +210,95 @@
                     <view key="view" contentMode="scaleToFill" id="OkJ-iu-FMA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J9-gW-knc">
+                                <rect key="frame" x="16" y="238" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDV-y3-Eyj">
+                                <rect key="frame" x="16" y="275" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6t7-YP-nms">
+                                <rect key="frame" x="277.5" y="275" width="81.5" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="mi nombre">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-5h-C4C">
+                                <rect key="frame" x="286.5" y="238" width="72.5" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="mi correo">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67n-aH-ckc">
+                                <rect key="frame" x="16" y="80" width="343" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="iQ9-QK-Uzq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYc-XI-yvo">
+                                <rect key="frame" x="129" y="569" width="117" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Eliminar cuenta">
+                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y7P-Fr-myd" firstAttribute="trailing" secondItem="67n-aH-ckc" secondAttribute="trailing" constant="16" id="1Qb-oi-1Oh"/>
+                            <constraint firstItem="5J9-gW-knc" firstAttribute="leading" secondItem="y7P-Fr-myd" secondAttribute="leading" constant="16" id="3cW-Ca-vu3"/>
+                            <constraint firstItem="y7P-Fr-myd" firstAttribute="bottom" secondItem="bYc-XI-yvo" secondAttribute="bottom" constant="16" id="4jv-nF-vCi"/>
+                            <constraint firstItem="CDV-y3-Eyj" firstAttribute="leading" secondItem="y7P-Fr-myd" secondAttribute="leading" constant="16" id="CPQ-Km-8NM"/>
+                            <constraint firstItem="5J9-gW-knc" firstAttribute="top" secondItem="67n-aH-ckc" secondAttribute="bottom" constant="8" id="Cwe-T0-R6A"/>
+                            <constraint firstItem="67n-aH-ckc" firstAttribute="top" secondItem="y7P-Fr-myd" secondAttribute="top" constant="16" id="IkH-aP-opO"/>
+                            <constraint firstItem="ciC-5h-C4C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OkJ-iu-FMA" secondAttribute="leading" constant="20" symbolic="YES" id="MKS-li-GDB"/>
+                            <constraint firstItem="y7P-Fr-myd" firstAttribute="trailing" secondItem="6t7-YP-nms" secondAttribute="trailing" constant="16" id="OXK-e5-8A2"/>
+                            <constraint firstItem="67n-aH-ckc" firstAttribute="leading" secondItem="y7P-Fr-myd" secondAttribute="leading" constant="16" id="hGQ-OB-ogk"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CDV-y3-Eyj" secondAttribute="trailing" constant="20" symbolic="YES" id="i76-hB-xJt"/>
+                            <constraint firstItem="CDV-y3-Eyj" firstAttribute="top" secondItem="5J9-gW-knc" secondAttribute="bottom" constant="16" id="kP8-PZ-n2e"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5J9-gW-knc" secondAttribute="trailing" constant="20" symbolic="YES" id="ltI-KS-9KD"/>
+                            <constraint firstItem="6t7-YP-nms" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OkJ-iu-FMA" secondAttribute="leading" constant="20" symbolic="YES" id="qSp-99-Ldh"/>
+                            <constraint firstItem="ciC-5h-C4C" firstAttribute="top" secondItem="67n-aH-ckc" secondAttribute="bottom" constant="8" id="rVn-Tv-Fbb"/>
+                            <constraint firstItem="y7P-Fr-myd" firstAttribute="trailing" secondItem="ciC-5h-C4C" secondAttribute="trailing" constant="16" id="tlI-xC-jZK"/>
+                            <constraint firstItem="6t7-YP-nms" firstAttribute="top" secondItem="ciC-5h-C4C" secondAttribute="bottom" constant="16" id="vDa-SN-PgV"/>
+                            <constraint firstItem="bYc-XI-yvo" firstAttribute="centerX" secondItem="OkJ-iu-FMA" secondAttribute="centerX" id="xj4-gy-oln"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y7P-Fr-myd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Perfil" id="auF-ht-HA7"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="auF-ht-HA7">
+                        <barButtonItem key="leftBarButtonItem" title="Añadir fondos" id="yus-ca-Jfh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Cerrar sesión" id="wfT-XL-ORK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userEmail" destination="ciC-5h-C4C" id="uED-LM-lgf"/>
+                        <outlet property="userName" destination="6t7-YP-nms" id="WDF-aE-4Ba"/>
+                        <outlet property="userWallet" destination="67n-aH-ckc" id="OSA-eQ-qXE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHx-Sg-SjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="1810"/>
+            <point key="canvasLocation" x="496.80000000000001" y="1809.4452773613195"/>
         </scene>
         <!--Sitios-->
         <scene sceneID="EPx-6g-DPQ">
@@ -366,7 +447,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ticket_cell" textLabel="awi-E7-EHc" detailTextLabel="HY3-Zh-tdm" style="IBUITableViewCellStyleSubtitle" id="LOb-wN-84k">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ticket_cell" textLabel="awi-E7-EHc" detailTextLabel="HY3-Zh-tdm" style="IBUITableViewCellStyleSubtitle" id="LOb-wN-84k">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LOb-wN-84k" id="bH5-rD-WFz">

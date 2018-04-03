@@ -9,10 +9,19 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var userWallet: UILabel!
+    
+    var userManager: UserManager = DAOFactory.createUserManager() as! UserManager
+    var database: FMDatabase = DbSingleton.getInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let currentUser = userManager.getCurrentUser(database)
+        userName.text = currentUser.name
+        userEmail.text = currentUser.email
+        userWallet.text = "\(currentUser.wallet)€"
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +30,8 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        let currentUser = userManager.getCurrentUser(database)
+        userWallet.text = "\(currentUser.wallet)€"
     }
-    */
-
 }
