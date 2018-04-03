@@ -18,7 +18,7 @@ class UserManager: UserDAO {
             
             if let result: FMResultSet = database.executeQuery(sentence, withArgumentsIn: data) {
                 while (result.next()) {
-                    user = User(email: result.string(forColumnIndex: 0)!, name: result.string(forColumnIndex: 1)!, password: result.string(forColumnIndex: 2)!, wallet: Int(result.int(forColumnIndex: 4)), isLogged: result.bool(forColumnIndex: 5))
+                    user = User(email: result.string(forColumnIndex: 0)!, name: result.string(forColumnIndex: 1)!, password: result.string(forColumnIndex: 2)!, wallet: Int(result.int(forColumnIndex: 3)), isLogged: result.bool(forColumnIndex: 4))
                 }
                 result.close()
                 
@@ -33,10 +33,12 @@ class UserManager: UserDAO {
     
     func updateWallet(_ database: FMDatabase, userEmail: String, quantityToAdd: Int) -> Bool {
         var result: Bool = false
+        let user: User = getInfo(database, userEmail: userEmail)
+        let operation = user.wallet + quantityToAdd
         
         if database.open() {
             let sentence = "UPDATE user SET wallet = ? WHERE email = ?"
-            let data: Array<Any> = [quantityToAdd, userEmail]
+            let data: Array<Any> = [operation, userEmail]
             
             result = database.executeUpdate(sentence, withArgumentsIn: data)
             

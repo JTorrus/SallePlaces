@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
     
     var database: FMDatabase = DbSingleton.getInstance()
     let userManager: UserManager = DAOFactory.createUserManager() as! UserManager
+    var existingUserEmail: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class RegisterViewController: UIViewController {
             let result = userManager.insert(database, itemToInsert: newUser)
             
             if result {
-                
+                existingUserEmail = textEmail.text!
             } else {
                 let alert = UIAlertController(title: "Error", message: "El correo que has introducido ya está en uso.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
