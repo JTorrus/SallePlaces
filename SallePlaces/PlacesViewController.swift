@@ -12,11 +12,13 @@ class PlacesViewController: UITableViewController {
     var places: PlaceManager = DAOFactory.createPlaceManager() as! PlaceManager
     var database: FMDatabase = DbSingleton.getInstance()
     var arrayOfPlaces: Array<Place> = []
+    var userManager: UserManager = DAOFactory.createUserManager() as! UserManager
     var currentUserEmail: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         arrayOfPlaces = places.read(database)
+        userManager.updateSessionState(database, isLogged: true, userEmail: userManager.getInfo(database, userEmail: currentUserEmail!).email)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

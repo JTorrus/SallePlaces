@@ -49,7 +49,7 @@
                                 </constraints>
                                 <state key="normal" title="Iniciar sesión"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="logged" id="dcR-Zf-9Vw"/>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" identifier="segue_log" id="dcR-Zf-9Vw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-n8-YOD">
@@ -465,6 +465,6 @@
         <image name="people" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UvQ-NB-akB"/>
+        <segue reference="dcR-Zf-9Vw"/>
     </inferredMetricsTieBreakers>
 </document>

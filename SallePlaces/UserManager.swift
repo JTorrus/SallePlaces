@@ -9,6 +9,26 @@
 import Foundation
 
 class UserManager: UserDAO {
+    func everybodyIsLoggedOff(_ database: FMDatabase) {
+        if database.open() {
+            let sentence = "UPDATE user SET is_logged = 'false'"
+            
+            try! database.executeUpdate(sentence, values: nil)
+            database.close()
+        }
+    }
+    
+    func updateSessionState(_ database: FMDatabase, isLogged: Bool, userEmail: String) {
+        if database.open() {
+            let sentence = "UPDATE user SET is_logged = ? WHERE email = ?"
+            let data: Array<Any> = [isLogged, userEmail]
+            
+            database.executeUpdate(sentence, withArgumentsIn: data)
+            
+            database.close()
+        }
+    }
+    
     func userExistsWithCorrectInfo(_ database: FMDatabase, userEmail: String, userPassword: String) -> Bool {
         var exists: Bool = false
         
@@ -52,11 +72,11 @@ class UserManager: UserDAO {
         return user!
     }
     
-    func getCurrentUser(_ database: FMDatabase) -> User? {
-        var user: User?
+    func getCurrentUser(_ database: FMDatabase) -> User {
+        var user: User?	
         
         if database.open() {
-            let sentence = "SELECT * FROM user WHERE is_logged = true"
+            let sentence = "SELECT * FROM user WHERE is_logged = '1'"
             
             if let result: FMResultSet = try? database.executeQuery(sentence, values: nil) {
                 while (result.next()) {
@@ -70,7 +90,7 @@ class UserManager: UserDAO {
             print("Error opening database: \(database.lastErrorMessage())")
         }
         
-        return user
+        return user!
     }
     
     func updateWallet(_ database: FMDatabase, userEmail: String, quantityToAdd: Int) -> Bool {

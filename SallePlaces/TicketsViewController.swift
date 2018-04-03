@@ -10,12 +10,13 @@ import UIKit
 
 class TicketsViewController: UITableViewController {
     var tickets: TicketManager = DAOFactory.createTicketManager() as! TicketManager
+    var users: UserManager = DAOFactory.createUserManager() as! UserManager
     var database: FMDatabase = DbSingleton.getInstance()
     var arrayOfTickets: Array<Ticket> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrayOfTickets = tickets.read(database, userEmail: "test@gmail.com")
+        arrayOfTickets = tickets.read(database, userEmail: users.getCurrentUser(database).email)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -25,7 +26,7 @@ class TicketsViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        arrayOfTickets = tickets.read(database, userEmail: "test@gmail.com")
+        arrayOfTickets = tickets.read(database, userEmail: users.getCurrentUser(database).email)
         tableView.reloadData()
     }
     

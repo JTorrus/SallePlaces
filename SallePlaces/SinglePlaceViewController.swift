@@ -40,35 +40,35 @@ class SinglePlaceViewController: UIViewController {
         let buyConfirmation = UIAlertController(title: "Compra de ticket", message: "Estás seguro/a de que quieres comprar una entrada para \(String(describing: singlePlace!.name))", preferredStyle: UIAlertControllerStyle.alert)
         
         buyConfirmation.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
-            if let userToBuy = self.userManager.getCurrentUser(self.database) {
-                if userToBuy.wallet >= self.singlePlace!.price {
-                    if self.userManager.updateWallet(self.database, userEmail: userToBuy.email, quantityToAdd: self.singlePlace!.price * (-1)) {
-                        let date = Date()
-                        let dateFormatter = DateFormatter()
-                        dateFormatter.dateFormat = "dd.MM.yyyy hh:mm:ss"
-                        let result = dateFormatter.string(from: date)
-                        
-                        let ticketIdGeneration: String = userToBuy.email + result
-                        let generatedTicket: Ticket = Ticket(ticketId: ticketIdGeneration, userEmail: userToBuy.email, placeName: self.singlePlace!.name, totalPrice: self.singlePlace!.price, date: result)
-                        
-                        if self.ticketManager.insert(self.database, itemToInsert: generatedTicket) {
-                            let alert = UIAlertController(title: "Compra realizada con éxito", message: "Se ha generado tu ticket, lo podrás consultar en el apartado de Tickets", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                            
-                            self.present(alert, animated: true, completion: nil)
-                        }
-                    } else {
-                        let alert = UIAlertController(title: "Error en la compra", message: "Ha habido un problema a la hora de realizar la compra", preferredStyle: UIAlertControllerStyle.alert)
+            let userToBuy: User = self.userManager.getCurrentUser(self.database)
+            
+            if userToBuy.wallet >= self.singlePlace!.price {                
+                if self.userManager.updateWallet(self.database, userEmail: userToBuy.email, quantityToAdd: self.singlePlace!.price * (-1)) {
+                    let date = Date()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd.MM.yyyy hh:mm:ss"
+                    let result = dateFormatter.string(from: date)
+                    
+                    let ticketIdGeneration: String = userToBuy.email + result
+                    let generatedTicket: Ticket = Ticket(ticketId: ticketIdGeneration, userEmail: userToBuy.email, placeName: self.singlePlace!.name, totalPrice: self.singlePlace!.price, date: result)
+                    
+                    if self.ticketManager.insert(self.database, itemToInsert: generatedTicket) {
+                        let alert = UIAlertController(title: "Compra realizada con éxito", message: "Se ha generado tu ticket, lo podrás consultar en el apartado de Tickets", preferredStyle: UIAlertControllerStyle.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         
                         self.present(alert, animated: true, completion: nil)
                     }
                 } else {
-                    let alert = UIAlertController(title: "Fondos insuficientes", message: "No tienes fondos suficientes para comprar esta entrada", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "Error en la compra", message: "Ha habido un problema a la hora de realizar la compra", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     
                     self.present(alert, animated: true, completion: nil)
                 }
+            } else {
+                let alert = UIAlertController(title: "Fondos insuficientes", message: "No tienes fondos suficientes para comprar esta entrada", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
             }
         }))
         

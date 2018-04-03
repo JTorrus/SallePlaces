@@ -13,7 +13,7 @@ class TicketManager: TicketDAO {
         var tickets: Array<Ticket> = Array()
         
         if database.open() {
-            let sentence = "SELECT * FROM ticket WHERE email = ?"
+            let sentence = "SELECT * FROM ticket WHERE email = ? ORDER BY date DESC"
             let data: Array = [userEmail]
             
             if let result: FMResultSet = database.executeQuery(sentence, withArgumentsIn: data) {
