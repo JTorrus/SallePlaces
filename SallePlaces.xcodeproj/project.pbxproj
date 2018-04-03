@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		668044DA20730BF300DB7BC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668044D920730BF300DB7BC0 /* ProfileViewController.swift */; };
+		668044DC207319B000DB7BC0 /* SinglePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668044DB207319B000DB7BC0 /* SinglePlaceViewController.swift */; };
 		6692E3A6205EEB3C0049E30C /* DbSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A5205EEB3C0049E30C /* DbSingleton.swift */; };
 		6692E3A8205EF1860049E30C /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A7205EF1860049E30C /* DAO.swift */; };
 		6692E3AA205EF2FD0049E30C /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A9205EF2FD0049E30C /* DAOFactory.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		668044D920730BF300DB7BC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		668044DB207319B000DB7BC0 /* SinglePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlaceViewController.swift; sourceTree = "<group>"; };
 		6692E3A5205EEB3C0049E30C /* DbSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbSingleton.swift; sourceTree = "<group>"; };
 		6692E3A7205EF1860049E30C /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		6692E3A9205EF2FD0049E30C /* DAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				6692E3BD205F39C10049E30C /* RegisterViewController.swift */,
 				EF3CC44B205AB90900A6CB47 /* TicketsViewController.swift */,
 				668044D920730BF300DB7BC0 /* ProfileViewController.swift */,
+				668044DB207319B000DB7BC0 /* SinglePlaceViewController.swift */,
 				EF3CC44D205AB90900A6CB47 /* Main.storyboard */,
 				EF3CC450205AB90900A6CB47 /* Assets.xcassets */,
 				EF3CC452205AB90900A6CB47 /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668044DC207319B000DB7BC0 /* SinglePlaceViewController.swift in Sources */,
 				6692E3AC205EF5B90049E30C /* User.swift in Sources */,
 				6692E3BE205F39C10049E30C /* RegisterViewController.swift in Sources */,
 				EF3CC4DD205AC14900A6CB47 /* LoginViewController.swift in Sources */,

@@ -36,5 +36,11 @@ class PlacesViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let place = segue.destination as? SinglePlaceViewController {
+            place.singlePlace = places.read(database)[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
 }
 
