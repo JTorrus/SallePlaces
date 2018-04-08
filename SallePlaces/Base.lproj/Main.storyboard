@@ -316,13 +316,13 @@
         <!--Introduce una cantidad-->
         <scene sceneID="ZrZ-dd-Prk">
             <objects>
-                <viewController id="ONp-3h-Urh" sceneMemberID="viewController">
+                <viewController id="ONp-3h-Urh" customClass="FundsViewController" customModule="SallePlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8yP-Zu-IyD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUB-ja-02C">
-                                <rect key="frame" x="16" y="272" width="343" height="124"/>
+                                <rect key="frame" x="16" y="271.5" width="343" height="124"/>
                                 <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -337,11 +337,23 @@
                         <viewLayoutGuide key="safeArea" id="hCn-k0-eZU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Introduce una cantidad" id="nVY-x9-aIp">
-                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="j3P-RU-GRP"/>
-                        <barButtonItem key="rightBarButtonItem" title="Añadir" style="done" id="qSe-XJ-YRJ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="j3P-RU-GRP">
+                            <connections>
+                                <segue destination="Rlu-QL-v2k" kind="unwind" identifier="un_cancel" unwindAction="unwindToProfileWithSegue:" id="2Iq-aT-8d8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Añadir" style="done" id="qSe-XJ-YRJ">
+                            <connections>
+                                <segue destination="Rlu-QL-v2k" kind="unwind" identifier="un_add" unwindAction="unwindToProfileWithSegue:" id="HnG-QX-8gg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fundsText" destination="nUB-ja-02C" id="mbB-sA-Ak1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajX-2C-pJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Rlu-QL-v2k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2000.8" y="1808.5457271364319"/>
         </scene>

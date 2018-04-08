@@ -19,6 +19,7 @@
 		668044EE207394C400DB7BC0 /* picasso.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E4207394C400DB7BC0 /* picasso.png */; };
 		668044EF207394C400DB7BC0 /* sagradafamilia.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E5207394C400DB7BC0 /* sagradafamilia.png */; };
 		668044F0207394C400DB7BC0 /* xocolata.png in Resources */ = {isa = PBXBuildFile; fileRef = 668044E6207394C400DB7BC0 /* xocolata.png */; };
+		668044F3207A6E5B00DB7BC0 /* FundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668044F2207A6E5B00DB7BC0 /* FundsViewController.swift */; };
 		6692E3A6205EEB3C0049E30C /* DbSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A5205EEB3C0049E30C /* DbSingleton.swift */; };
 		6692E3A8205EF1860049E30C /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A7205EF1860049E30C /* DAO.swift */; };
 		6692E3AA205EF2FD0049E30C /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3A9205EF2FD0049E30C /* DAOFactory.swift */; };
@@ -62,6 +63,7 @@
 		668044E4207394C400DB7BC0 /* picasso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picasso.png; sourceTree = "<group>"; };
 		668044E5207394C400DB7BC0 /* sagradafamilia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagradafamilia.png; sourceTree = "<group>"; };
 		668044E6207394C400DB7BC0 /* xocolata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xocolata.png; sourceTree = "<group>"; };
+		668044F2207A6E5B00DB7BC0 /* FundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewController.swift; sourceTree = "<group>"; };
 		6692E3A5205EEB3C0049E30C /* DbSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbSingleton.swift; sourceTree = "<group>"; };
 		6692E3A7205EF1860049E30C /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		6692E3A9205EF2FD0049E30C /* DAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				EF3CC44B205AB90900A6CB47 /* TicketsViewController.swift */,
 				668044D920730BF300DB7BC0 /* ProfileViewController.swift */,
 				668044DB207319B000DB7BC0 /* SinglePlaceViewController.swift */,
+				668044F2207A6E5B00DB7BC0 /* FundsViewController.swift */,
 				EF3CC44D205AB90900A6CB47 /* Main.storyboard */,
 				EF3CC450205AB90900A6CB47 /* Assets.xcassets */,
 				EF3CC452205AB90900A6CB47 /* LaunchScreen.storyboard */,
@@ -316,6 +319,7 @@
 				6692E3B6205F03600049E30C /* UserDAO.swift in Sources */,
 				EF3CC4D9205ABD8300A6CB47 /* FMDatabaseAdditions.m in Sources */,
 				6692E3A8205EF1860049E30C /* DAO.swift in Sources */,
+				668044F3207A6E5B00DB7BC0 /* FundsViewController.swift in Sources */,
 				EF3CC4DB205ABD8300A6CB47 /* FMDatabase.m in Sources */,
 				6692E3A6205EEB3C0049E30C /* DbSingleton.swift in Sources */,
 			);
