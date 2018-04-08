@@ -31,7 +31,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SN7-Fc-a9g">
                                 <rect key="frame" x="67.5" y="318.5" width="240" height="30"/>
@@ -40,7 +40,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8x-YF-anB">
                                 <rect key="frame" x="67" y="356.5" width="240" height="30"/>
@@ -132,7 +132,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYM-ML-VgE">
                                 <rect key="frame" x="67.5" y="318.5" width="240" height="30"/>
@@ -141,7 +141,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihG-hL-Rfu">
                                 <rect key="frame" x="60" y="617" width="240" height="30"/>
@@ -160,7 +160,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRL-xs-cMd">
                                 <rect key="frame" x="67" y="394" width="240" height="30"/>
@@ -262,6 +262,10 @@
                                 <state key="normal" title="Eliminar cuenta">
                                     <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionPerformed:" destination="q2C-n2-08G" eventType="touchUpInside" id="zGG-8Y-avD"/>
+                                    <segue destination="Lla-Ks-l1G" kind="presentation" identifier="segue_del" id="gxj-W6-4a8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -287,8 +291,17 @@
                         <viewLayoutGuide key="safeArea" id="y7P-Fr-myd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="auF-ht-HA7">
-                        <barButtonItem key="leftBarButtonItem" title="Añadir fondos" id="yus-ca-Jfh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Cerrar sesión" id="wfT-XL-ORK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cerrar sesión" id="wfT-XL-ORK">
+                            <connections>
+                                <action selector="actionPerformed:" destination="q2C-n2-08G" id="PTE-bo-Z6C"/>
+                                <segue destination="Lla-Ks-l1G" kind="presentation" identifier="segue_logoff" id="HDO-vS-T7Q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Añadir fondos" id="yus-ca-Jfh">
+                            <connections>
+                                <segue destination="Gsj-tG-NcW" kind="presentation" id="REq-d5-MDt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="userEmail" destination="ciC-5h-C4C" id="uED-LM-lgf"/>
@@ -299,6 +312,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHx-Sg-SjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="496.80000000000001" y="1809.4452773613195"/>
+        </scene>
+        <!--Introduce una cantidad-->
+        <scene sceneID="ZrZ-dd-Prk">
+            <objects>
+                <viewController id="ONp-3h-Urh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yP-Zu-IyD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0,00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUB-ja-02C">
+                                <rect key="frame" x="16" y="272" width="343" height="124"/>
+                                <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nUB-ja-02C" firstAttribute="leading" secondItem="hCn-k0-eZU" secondAttribute="leading" constant="16" id="efD-Us-U2a"/>
+                            <constraint firstItem="nUB-ja-02C" firstAttribute="centerY" secondItem="8yP-Zu-IyD" secondAttribute="centerY" id="lRz-dL-cP6"/>
+                            <constraint firstItem="hCn-k0-eZU" firstAttribute="trailing" secondItem="nUB-ja-02C" secondAttribute="trailing" constant="16" id="mgc-Rs-JEQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hCn-k0-eZU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Introduce una cantidad" id="nVY-x9-aIp">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="j3P-RU-GRP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Añadir" style="done" id="qSe-XJ-YRJ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajX-2C-pJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.8" y="1808.5457271364319"/>
         </scene>
         <!--Sitios-->
         <scene sceneID="EPx-6g-DPQ">
@@ -539,6 +584,24 @@
             </objects>
             <point key="canvasLocation" x="-207" y="997"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9tc-y4-22m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gsj-tG-NcW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gyj-vP-5dR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ONp-3h-Urh" kind="relationship" relationship="rootViewController" id="tf8-tM-lIc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykz-ju-uQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265.5999999999999" y="1809.8950524737634"/>
+        </scene>
     </scenes>
     <resources>
         <image name="map_marker" width="30" height="30"/>
@@ -547,5 +610,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dcR-Zf-9Vw"/>
+        <segue reference="gxj-W6-4a8"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -36,6 +36,14 @@ class RegisterViewController: UIViewController {
                     let alert = UIAlertController(title: "Error", message: "El correo que has introducido ya está en uso.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
+                } else {
+                    if let tbvc = segue.destination as? UITabBarController {
+                        if let navigationController = tbvc.viewControllers![0] as? UINavigationController {
+                            if let view = navigationController.topViewController as? PlacesViewController {
+                                view.currentUserEmail = newUser.email
+                            }
+                        }
+                    }
                 }
             } else {
                 let alert = UIAlertController(title: "Aviso", message: "Debes rellenar todos los datos para poder registrarte", preferredStyle: UIAlertControllerStyle.alert)

@@ -34,4 +34,42 @@ class ProfileViewController: UIViewController {
         let currentUser = userManager.getCurrentUser(database)
         userWallet.text = "\(currentUser.wallet)€"
     }
+    
+    @IBAction func actionPerformed(_ sender: Any) {
+        if sender is UIBarButtonItem {
+            let logOffConfirmation = UIAlertController(title: "Cerrar sesión", message: "¿Estás seguro/a de que quieres cerrar sesión?", preferredStyle: UIAlertControllerStyle.alert)
+            
+            logOffConfirmation.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler:  { action in
+                self.performSegue(withIdentifier: "segue_logoff", sender: self)
+            }))
+            logOffConfirmation.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+            
+            self.present(logOffConfirmation, animated: true, completion: nil)
+        } else if sender is UIButton {
+            let deletionConfirmation = UIAlertController(title: "Eliminar cuenta", message: "¿Estás seguro/a de que quieres eliminar tu cuenta?", preferredStyle: UIAlertControllerStyle.alert)
+            let currentUser = userManager.getCurrentUser(self.database)
+            
+            deletionConfirmation.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (action: UIAlertAction) in
+                if self.userManager.delete(self.database, itemToDelete: currentUser) {
+                    let alert = UIAlertController(title: "Cuenta eliminada", message: "Se ha eliminado tu cuenta con éxito", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                        self.performSegue(withIdentifier: "segue_del", sender: self)
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "Error", message: "Ha habido un error al eliminar tu cuenta", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }))
+            deletionConfirmation.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+            
+            self.present(deletionConfirmation, animated: true, completion: nil)
+        }
+    }
+    
 }
