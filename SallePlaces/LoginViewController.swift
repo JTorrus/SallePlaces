@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
                     do {
                         try fileManager.copyItem(at: sourceDatabaseUrl, to: databaseUrl)
                     } catch {
-                        print("Error copying the database to the Documents Directory")
+                        print("Error copying the database to the Document Directory")
                     }
                 }
             }

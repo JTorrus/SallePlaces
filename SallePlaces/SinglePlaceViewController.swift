@@ -23,6 +23,10 @@ class SinglePlaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        placeImage?.image = singlePlace?.image
+        placeImage?.contentMode = UIViewContentMode.scaleToFill
+        view.addSubview(placeImage)
+        
         placeName?.text = singlePlace?.name
         placeUbication?.text = singlePlace?.location
         placeSchedule?.text = singlePlace?.schedule

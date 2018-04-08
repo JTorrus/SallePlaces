@@ -6,7 +6,7 @@
 //  Copyright © 2018 Alumne. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     var name: String
@@ -14,4 +14,5 @@ struct Place {
     var schedule: String
     var price: Int
     var description: String
+    var image: UIImage
 }
