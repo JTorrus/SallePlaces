@@ -35,17 +35,27 @@ class ProfileViewController: UIViewController {
         userWallet.text = "\(currentUser.wallet)€"
     }
     
-    @IBAction func actionPerformed(_ sender: Any) {
-        if sender is UIBarButtonItem {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        var result: Bool = true
+        
+        if identifier == "segue_logoff" {
             let logOffConfirmation = UIAlertController(title: "Cerrar sesión", message: "¿Estás seguro/a de que quieres cerrar sesión?", preferredStyle: UIAlertControllerStyle.alert)
             
-            logOffConfirmation.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler:  { action in
+            logOffConfirmation.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
                 self.performSegue(withIdentifier: "segue_logoff", sender: self)
             }))
-            logOffConfirmation.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+            logOffConfirmation.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: { action in
+                result = false
+            }))
             
             self.present(logOffConfirmation, animated: true, completion: nil)
-        } else if sender is UIButton {
+        }
+        
+        return result
+    }
+    
+    @IBAction func actionPerformed(_ sender: Any) {
+        if sender is UIButton {
             let deletionConfirmation = UIAlertController(title: "Eliminar cuenta", message: "¿Estás seguro/a de que quieres eliminar tu cuenta?", preferredStyle: UIAlertControllerStyle.alert)
             let currentUser = userManager.getCurrentUser(self.database)
             
