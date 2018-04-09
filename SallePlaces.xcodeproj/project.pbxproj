@@ -33,6 +33,7 @@
 		6692E3BA205F05FE0049E30C /* PlaceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3B9205F05FE0049E30C /* PlaceDAO.swift */; };
 		6692E3BC205F06080049E30C /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3BB205F06080049E30C /* PlaceManager.swift */; };
 		6692E3BE205F39C10049E30C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692E3BD205F39C10049E30C /* RegisterViewController.swift */; };
+		66CBB929207C08EA00E9022A /* salleplaces.db in Resources */ = {isa = PBXBuildFile; fileRef = 66CBB928207C08EA00E9022A /* salleplaces.db */; };
 		EF3CC448205AB90900A6CB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC447205AB90900A6CB47 /* AppDelegate.swift */; };
 		EF3CC44A205AB90900A6CB47 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC449205AB90900A6CB47 /* PlacesViewController.swift */; };
 		EF3CC44C205AB90900A6CB47 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC44B205AB90900A6CB47 /* TicketsViewController.swift */; };
@@ -47,7 +48,6 @@
 		EF3CC4DA205ABD8300A6CB47 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4D4205ABD8300A6CB47 /* FMResultSet.m */; };
 		EF3CC4DB205ABD8300A6CB47 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4D5205ABD8300A6CB47 /* FMDatabase.m */; };
 		EF3CC4DD205AC14900A6CB47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */; };
-		EF3CC4E2205ACC0200A6CB47 /* salleplaces.db in Resources */ = {isa = PBXBuildFile; fileRef = EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +77,7 @@
 		6692E3B9205F05FE0049E30C /* PlaceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDAO.swift; sourceTree = "<group>"; };
 		6692E3BB205F06080049E30C /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
 		6692E3BD205F39C10049E30C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		66CBB928207C08EA00E9022A /* salleplaces.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = salleplaces.db; sourceTree = "<group>"; };
 		EF3CC444205AB90900A6CB47 /* SallePlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SallePlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3CC447205AB90900A6CB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF3CC449205AB90900A6CB47 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		EF3CC4D4205ABD8300A6CB47 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		EF3CC4D5205ABD8300A6CB47 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = salleplaces.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +155,8 @@
 			children = (
 				668044F1207394FA00DB7BC0 /* images */,
 				EF3CC4DF205ACB9300A6CB47 /* fmdb */,
-				EF3CC4E1205ACC0200A6CB47 /* salleplaces.db */,
 				EF3CC447205AB90900A6CB47 /* AppDelegate.swift */,
+				66CBB928207C08EA00E9022A /* salleplaces.db */,
 				EF3CC449205AB90900A6CB47 /* PlacesViewController.swift */,
 				EF3CC4DC205AC14900A6CB47 /* LoginViewController.swift */,
 				6692E3BD205F39C10049E30C /* RegisterViewController.swift */,
@@ -284,9 +284,9 @@
 				668044F0207394C400DB7BC0 /* xocolata.png in Resources */,
 				668044EF207394C400DB7BC0 /* sagradafamilia.png in Resources */,
 				EF3CC44F205AB90900A6CB47 /* Main.storyboard in Resources */,
-				EF3CC4E2205ACC0200A6CB47 /* salleplaces.db in Resources */,
 				668044ED207394C400DB7BC0 /* egipcio.png in Resources */,
 				668044E7207394C400DB7BC0 /* batllo.jpg in Resources */,
+				66CBB929207C08EA00E9022A /* salleplaces.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
