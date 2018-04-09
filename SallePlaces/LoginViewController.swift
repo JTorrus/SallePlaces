@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textEmail: UITextField!
     @IBOutlet weak var textPassword: UITextField!
     
@@ -22,7 +22,12 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         setUpDatabase()
         userManager.everybodyIsLoggedOff(database)
-        print(FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!.absoluteString)
+        
+        textEmail.delegate = self
+        textEmail.tag = 0
+        textPassword.delegate = self
+        textPassword.tag = 1
+        //print(FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!.absoluteString)
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,5 +77,15 @@ class LoginViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return false
     }
 }
