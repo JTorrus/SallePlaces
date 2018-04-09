@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func actionPerformed(_ sender: Any) {
-        if sender is UINavigationItem {
+        if sender is UIBarButtonItem {
             let logOffConfirmation = UIAlertController(title: "Cerrar sesión", message: "¿Estás seguro/a de que quieres cerrar sesión?", preferredStyle: UIAlertControllerStyle.alert)
             
             logOffConfirmation.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler:  { action in
